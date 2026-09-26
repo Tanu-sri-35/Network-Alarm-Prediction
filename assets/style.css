@@ -1,0 +1,330 @@
+/* Main theme colors */
+:root {
+  --primary-color: #0072C6;
+  --secondary-color: #2CA58D;
+  --accent-color: #F3A712;
+  --error-color: #E6212B;
+  --background-color: #f8f9fa;
+  --card-background: #ffffff;
+  --text-color: #333333;
+  --light-text: #6c757d;
+  --border-color: #dee2e6;
+}
+
+/* Global styles */
+body {
+  font-family: 'Bold', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-title {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--light-text);
+}
+
+/* Card styles */
+.stat-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.stat-card {
+  background-color: var(--card-background);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  color: var(--light-text);
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--light-text);
+  margin-left: 0.5rem;
+  font-weight: 400;
+}
+
+/* Action button */
+.action-container {
+  margin-top: 2rem;
+}
+
+.start-button {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.start-button:hover {
+  background-color: #e09400;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+/* Prediction card styles */
+.prediction-card {
+  background-color: var(--card-background);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.prediction-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.prediction-card h4 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.prediction-type {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.prediction-prob {
+  font-size: 0.875rem;
+  color: var(--light-text);
+  margin-bottom: 0.25rem;
+}
+
+.prediction-time {
+  font-size: 0.875rem;
+  color: var(--light-text);
+}
+
+/* Alarm card styles */
+.alarm-card {
+  background-color: var(--card-background);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.alarm-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.alarm-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.alarm-type {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.alarm-time {
+  font-size: 0.875rem;
+  color: var(--light-text);
+}
+
+.alarm-details p {
+  margin: 0.25rem 0;
+  font-size: 0.875rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .logo {
+    margin-bottom: 1rem;
+  }
+  
+  .main-title {
+    font-size: 1.5rem;
+  }
+  
+  .stat-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Custom Streamlit components styling */
+/* Make the sidebar more compact */
+.css-1d391kg {
+  padding-top: 2rem;
+}
+
+/* Style the tabs */
+.stTabs [data-baseweb="tab-list"] {
+  gap: 1rem;
+}
+
+.stTabs [data-baseweb="tab"] {
+  font-size: 10rem;
+  height: 40px;
+  white-space: pre-wrap;
+  background-color: grey;
+  border-radius: 4px;
+  padding: 0 16px;
+  font-weight: 500;
+}
+
+.stTabs [aria-selected="true"] {
+  background-color: var(--primary-color);
+  color: black;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+  background-color: #e6e6e6;
+}
+
+/* Style code blocks */
+code {
+  background-color: #f8f9fa;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 85%;
+}
+
+/* Style metrics */
+[data-testid="stMetricValue"] {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Style progress bars */
+[data-testid="stProgressBar"] > div > div {
+  background-color: var(--secondary-color);
+}
+
+/* Style buttons */
+.stButton > button {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  font-weight: 600;
+  border: none;
+}
+
+.stButton > button:hover {
+  background-color: #e09400;
+}
+
+/* Style sliders */
+[data-testid="stSlider"] > div > div > div {
+  background-color: var(--secondary-color);
+}
+
+/* Style success/info/warning/error messages */
+.stAlert {
+  border-radius: 8px;
+}
+
+.stAlert > div {
+  padding: 0.75rem 1rem;
+}
+
+/* Style table headers */
+thead tr th {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+}
+
+/* Style data tables */
+[data-testid="stTable"] {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Animation for cards */
+.stat-card, .prediction-card, .alarm-card {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
